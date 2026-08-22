@@ -1,9 +1,14 @@
 def calcular(a, b):
-    return a + b
+    soma = a + b
+    subtracao = a - b
+    multiplicacao = a * b
+    divisao = a / b
 
-numero1 = float(input("Digite o primeiro número: "))
-numero2 = float(input("Digite o segundo número: "))
+    return soma, subtracao, multiplicacao, divisao
 
-resultado = calcular(numero1, numero2)
+resultado = calcular(10, 2)
 
-print("Resultado:", resultado)
+print("Soma:", resultado[0])
+print("Subtração:", resultado[1])
+print("Multiplicação:", resultado[2])
+print("Divisão:", resultado[3])
