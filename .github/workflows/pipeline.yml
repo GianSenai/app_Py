@@ -1,0 +1,28 @@
+name: Primeira Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar Código do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.14'
+
+      - name: Executar Calculadora
+        run: python calculadora.py
+  deploy:
+    needs: teste
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        run: echo "Deploy Realizado"
