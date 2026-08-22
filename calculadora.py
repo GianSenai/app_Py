@@ -1,14 +1,17 @@
-def calcular(a, b):
-    soma = a + b
-    subtracao = a - b
-    multiplicacao = a * b
-    divisao = a / b
+def soma():
+    soma = 10 + 2
+    return soma
+def subtração():
+    soma = 10 + 2
+    return soma
+def mult():
+    soma = 10 + 2
+    return soma
+def div():
+    soma = 10 + 2
+    return soma
 
-    return soma, subtracao, multiplicacao, divisao
-
-resultado = calcular(10, 2)
-
-print("Soma:", resultado[0])
-print("Subtração:", resultado[1])
-print("Multiplicação:", resultado[2])
-print("Divisão:", resultado[3])
+print("Soma:", soma[0])
+print("Subtração:", subtração[1])
+print("Multiplicação:", mult[2])
+print("Divisão:", div[3])
