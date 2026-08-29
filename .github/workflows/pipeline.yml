@@ -1,4 +1,4 @@
-name: Primeira Pipeline
+name: Testes da Calculadora
 
 on:
   push:
@@ -9,20 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar Código do Repositório
+      - name: Baixar código do repositório
         uses: actions/checkout@v4
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-            python-version: '3.14'
+          python-version: '3.12'
 
-      - name: Executar Calculadora
-        run: python calculadora.py
-  deploy:
-    needs: teste
-    runs-on: ubuntu-latest
+      - name: Instalar pytest
+        run: pip install pytest
 
-    steps:
-      - name: Deploy
-        run: echo "Deploy Realizado"
+      - name: Executar testes
+        run: pytest

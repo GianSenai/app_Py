@@ -1,17 +1,16 @@
-def soma():
-    soma = 10 + 2
-    return soma
-def subtração():
-    soma = 10 + 2
-    return soma
-def mult():
-    soma = 10 + 2
-    return soma
-def div():
-    soma = 10 + 2
-    return soma
+def soma(a, b):
+    return a + b
 
-print("Soma:", soma[0])
-print("Subtração:", subtração[1])
-print("Multiplicação:", mult[2])
-print("Divisão:", div[3])
+
+def subtracao(a, b):
+    return a - b
+
+
+def multiplicacao(a, b):
+    return a * b
+
+
+def divisao(a, b):
+    if b == 0:
+        raise ValueError("Não é possível dividir por zero")
+    return a / b
